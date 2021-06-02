@@ -25,18 +25,18 @@ function textBill()
 
     
     function callTotal(){
-        return 'R' + calls.toFixed(2);
+        return   calls.toFixed(2);
 
     }
     function smsTotal(){
-        return 'R'+ sms.toFixed(2);
+        return  sms.toFixed(2);
 
     }
     
 
     function billTotal(){
  
-        return 'R' +total.toFixed(2);
+        return total.toFixed(2);
 
 
     }
