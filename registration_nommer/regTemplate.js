@@ -6,7 +6,6 @@ var townsT = document.querySelector(".townT");
 var errorMsgT = document.querySelector(".errorMsgT");
 var successMsgT = document.querySelector(".successT");
 var registrationTemplate = document.querySelector(".userTemplate").innerHTML;
-var townChange=document.querySelector(".selectTown")
 var template = Handlebars.compile(registrationTemplate);
 
 var userTemp = [];
@@ -72,8 +71,9 @@ function getUserRegT(){
             }, 2000)      
         } else {
             if(regInstanceT.checkRegNumbersT(regT)) {
-                displayTownElementT.innerHTML = template ({ registration : regInstanceT.regListT(regT)});
-               
+                 template({ registration : regInstanceT.regListT(regT)});
+
+                successMsgT.classList.add("success");
                         successMsgT.innerHTML = 'Entry succesful!';
                         setTimeout(function(){
                             successMsgT.innerHTML = "";
@@ -98,24 +98,57 @@ function getUserRegT(){
     inputTownElementT.value = "";
     townsT.selectedIndex = 0;
 
-  userTemp.forEach(displayRegNumberT);
-   
+    userTemp.forEach(displayRegNumberT);
+    //displayTownElementT.innerHTML = template ({ registration : userTemp});
 }
 addBtnT.addEventListener("click", getUserRegT)
 
 
-townChange.onchange = function() {
+townsT.onchange = function() {
 
-    var townFiltered = townChange.selectedIndex;
+    while (displayTownElementT.firstChild) {
+        displayTownElementT.removeChild(displayTownElementT.firstChild);
+        }
+    
+  
+    var townFilteredT = townsT.selectedIndex;
 
-    var regTempAvailable = townChange.options[townFiltered].value;
+    var regAvailableT = townsT.options[townFilteredT].value;
+    var noRegT = townsT.value;
 
-    var filterResults = regInstanceT.registrationsT(regTempAvailable);
+     var filterResultsT = regInstanceT.registrationsT(regAvailableT);
+     console.log(filterResultsT)
    
-    displayTownElementT.innerHTML = template ({ registration : filterResults});
+     if(regAvailableT){
+            if (filterResultsT.length != 0) {
+
+             template ({ registration :  filterResultsT.forEach(displayRegNumberT)});  
+               
+                
+            }
+            else {
+                displayTownElementT.innerHTML =  "There are no registrations to display for this town";
+            
+        }
+          
+        }
+     
+
+
+    
+    if(noRegT=='All'){
+        while (displayTownElementT.firstChild) {
+            displayTownElementT.removeChild(displayTownElementT.firstChild);
+        }
+      
+        userTemp.forEach(displayRegNumberT);
+    }
+  
 }
 
+
 function resetT(){
+    successMsgT.classList.add("success");
     successMsgT.innerHTML = 'Application reset succesful!';
     setTimeout(function(){
         successMsgT.innerHTML = "";

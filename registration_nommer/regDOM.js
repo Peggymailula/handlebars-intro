@@ -69,6 +69,7 @@ function getUserRegs(){
         } else {
             if(regInstances.checkRegNumbers(regs)) {
                 regInstances.regList(regs);
+                successMsgs.classList.add('success')
                         successMsgs.innerHTML = 'Entry succesful!';
                         setTimeout(function(){
                             successMsgs.innerHTML = "";
@@ -121,22 +122,10 @@ townss.onchange = function() {
                 displayTownElements.innerHTML =  "There are no registrations to display for this town";
             
         }
-            // console.log(newArray)
-            // displayTownElement.innerHTML =  "There are no registrations to display for this town";
-
-        
-        // else {
-        //     filterResults.forEach(displayRegNumbers);
-        // }
-            // displayTownElement.innerHTML =  "There are no registrations to display for this town";
+          
         }
      
 
-    // if(regAvailable){
-    //     filterResults.forEach(displayRegNumbers);
-    //   //  console.log( filterResults.forEach(displayRegNumbers))
-    // }
-    
 
     
     if(noRegs=='All'){
@@ -150,6 +139,7 @@ townss.onchange = function() {
 
 
 function resets(){
+    successMsgs.classList.add('success')
     successMsgs.innerHTML = 'Application reset succesful!';
     setTimeout(function(){
         successMsgs.innerHTML = "";
