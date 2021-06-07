@@ -25,11 +25,11 @@ function textBill()
 
     
     function callTotal(){
-        return   calls.toFixed(2);
+        return calls.toFixed(2);
 
     }
     function smsTotal(){
-        return  sms.toFixed(2);
+        return sms.toFixed(2);
 
     }
     

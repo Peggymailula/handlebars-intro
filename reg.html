@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./registration_nommer/registrations-number.css">
+    <link rel="stylesheet" href="./registration_nommer/simple-grid.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script type="text/x-template" class="userTemplate">
+        {{#each registration}}
+        <li>
+          {{this}}
+        </li>
+        {{/each}}
+  
+    </script>
+    <title>Template</title>
+</head>
+<style>
+    /* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color:rgb(224, 106, 224);
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color:palevioletred;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+</style>
+<body>
+    <div class="split left">
+        <div class="container">
+            <section class="textInput">
+                <div class="blockItems"></div>
+                    <h1>Registration Numbers</h1>
+                 
+        
+                        <div class="reg-input row">
+                            <p class="errorMsgs"></p>
+                            <p class="successm"></p>
+                            <div class="textArea">
+                                <br><br><br> 
+                            <label class="label">Enter registration-number:</label>
+                            <input style="margin-left: 1%;" type="text" class="inputs" placeholder="Use CA-12345 / CA-123-456 / CA-123456 format">
+                       
+                    </div>
+                        </div>
+                        <div class="row">
+                       <div class="col-12">
+                           
+                         <button class="addButtons">Add</button>
+        
+                        
+                            <button class="resetBtns">Reset</button>
+                        </div>
+        </div>
+                
+                    <div class="twoButtons">
+                        <div class="filterDisplay">
+                        <div class="selectTown">
+                            <div class="filter">
+                              <select class="towns">
+                                    <option class="value" value="">Select Town</option>
+                                    <option class="value" name="filter" value="Cape Town">Cape Town</option>
+                                    <option class="value" name="filter" value="Bellville">Bellville</option>
+                                    <option class="value" name="filter" value="Stellenbosch">Stellenbosch</option>
+                                   <option class="value" name="filter" value="All">Show All</option> 
+                                </select>
+                           
+        
+                        </div>
+                       
+                        </div>
+                      
+                    </div>
+                </div>
+                
+            </section>
+            <section class="registrationsd">
+                              
+                <ul class="displayTowns" >     
+                    
+                </ul>    
+            </section>
+      </div>
+      
+      <div class="split right">
+        <div class="container">
+            <section class="textInput">
+                <div class="blockItems"></div>
+                    <h1>Registration Numbers</h1>
+                 
+        
+                        <div class="reg-input row">
+                            <p class="errorMsgT"></p>
+                            <p class="successT"></p>
+                            <div class="textArea">
+                                <br><br><br> 
+                            <label class="label">Enter registration-number:</label>
+                            <input style="margin-left: 1%;" type="text" class="inputT" placeholder="Use CA-12345 / CA-123-456 / CA-123456 format">
+                       
+                    </div>
+                        </div>
+                        <div class="row">
+                       <div class="col-12">
+                           
+                         <button class="addButtonT">Add</button>
+        
+                        
+                            <button class="resetBtnT">Reset</button>
+                        </div>
+        </div>
+                
+                    <div class="twoButtons">
+                        <div class="filterDisplay">
+                        <div class="selectTownT">
+                            <div class="filter">
+                              <select class="townT">
+                                    <option class="value" value="">Select Town</option>
+                                    <option class="value" name="filter" value="Cape Town">Cape Town</option>
+                                    <option class="value" name="filter" value="Bellville">Bellville</option>
+                                    <option class="value" name="filter" value="Stellenbosch">Stellenbosch</option>
+                                   <option class="value" name="filter" value="All">Show All</option> 
+                                </select>
+                           
+        
+                        </div>
+                       
+                        </div>
+                      
+                    </div>
+                </div>
+                
+            </section>
+            <section class="registrationT">
+                              
+                <ul class="displayTownT" >     
+                    
+                </ul>    
+            </section>
+      </div>
+</body>
+<script src="./registration_nommer/regDOM-factory.js"></script>
+<script src="./registration_nommer/regDOM.js"></script>
+<script src="./registration_nommer/regTemp-Factory.js"></script>
+<script src="./registration_nommer/regTemplate.js"></script>
+</html>

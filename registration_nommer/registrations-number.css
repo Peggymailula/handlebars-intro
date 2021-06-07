@@ -18,18 +18,17 @@ h1{
 .textArea label {
  font-weight: bolder;
 }
-.test {
-    width: 400px;
-    background-color: #0c0f33;
-    color: white;
-    padding: 20px;
+
+.textArea .inputs {
+    border: 1px solid #0c0f33;
     border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-    margin: auto;
-    /* border: 10px solid #5e1d00;    */
+    padding: 20px;
+    width: 380px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    /* margin-top: 20px; */
 }
-.textArea .input {
+.textArea .inputT {
     border: 1px solid #0c0f33;
     border-radius: 5px;
     padding: 20px;
@@ -77,14 +76,28 @@ float: left;
     margin: auto;
 }
 
-.addButton{
+.addButtons{
  
     padding: 10px;
     width: 20%;
     margin-left: 38%; 
     font:bold;
 }
-.resetBtn{
+.addButtonT{
+ 
+    padding: 10px;
+    width: 20%;
+    margin-left: 38%; 
+    font:bold;
+}
+.resetBtns{
+  
+    padding: 10px;
+    width: 20%;
+    /* margin-left: 30%; */
+    font:bold;
+}
+.resetBtnT{
   
     padding: 10px;
     width: 20%;
@@ -127,7 +140,7 @@ select {
     margin: auto;
 
 }
-.registrations .displayTown {
+.registrations .displayTowns {
     display: flex;
     margin-left: -50px;
     position: relative;
@@ -135,13 +148,13 @@ select {
 }
 
 
-.registrations .displayTown::after {
+.registrations .displayTowns::after {
 	content: "";
 	display: table;
 	clear: both;
 }
 
-.registrations .displayTown::before {
+.registrations .displayTowns::before {
      content: '\A'; 
      white-space: pre; 
     }
@@ -184,7 +197,21 @@ select {
  
 @media  (min-width: 800px){
 
-.reg {
+.regs {
+    margin: 20px;
+    /* margin-left:-50px; */
+   
+    width: 12%;
+    padding: 9px;
+    background-color:lightgrey;
+    border: 5px solid black;
+    text-decoration:  #fff;
+    font-weight: bolder;
+    border-radius: 8px;
+    text-align: center;
+    font-size: small;
+}
+.regT{
     margin: 20px;
     /* margin-left:-50px; */
    
@@ -202,7 +229,21 @@ select {
 }
 @media  (max-width: 800px){
     
-.reg {
+.regs {
+    margin: 20px;
+    /* margin-left:-50px; */
+   
+    width: 12%;
+    padding: 7px;
+    background-color:lightgrey;
+    border: 5px solid black;
+    text-decoration:  #fff;
+    font-weight: bolder;
+    border-radius: 8px;
+    text-align: center;
+    font-size: small;
+}
+.regT {
     margin: 20px;
     /* margin-left:-50px; */
    

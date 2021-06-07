@@ -2,7 +2,7 @@ function registrationFactoryFunction() {
 
   var capeCities = [];
 
-  var towns = {
+  var townss = {
     
     'CY' : 'Bellville',
     'CL' : 'Stellenbosch',
@@ -17,7 +17,7 @@ function registrationFactoryFunction() {
   var invalidRegNums = [];
 
   function regList(inputReg) {
-    userReg.unshift(inputReg);
+    userRegs.unshift(inputReg);
   }
 
   function getTown(town){
@@ -32,14 +32,14 @@ function registrationFactoryFunction() {
       var str;
       var townFiltered = [];
 
-        for (var town in towns) {
-          if (towns[town] === inputReg) {
+        for (var town in townss) {
+          if (townss[town] === inputReg) {
             str = town;
           }
 
       }
      
-    userReg.forEach(function(car) {
+    userRegs.forEach(function(car) {
         if(car.startsWith(str)) {
          townFiltered.push(car);
          }
@@ -69,7 +69,7 @@ function registrationFactoryFunction() {
   function checkRegNumbers(reg) {
   
     if(/^((CJ|CY|CL|CA)\-([0-9]){3}\-([0-9]){3})$/.test(reg) || /^((CJ|CY|CL|CA)\-([0-9]){6})$/.test(reg) || /^((CJ|CY|CL|CA)\-([0-9]){5})$/.test(reg)) {
-      userReg.forEach(function(car){
+      userRegs.forEach(function(car){
         if(car == reg) {
           invalidRegistrations++;
           duplicates.push(reg);
