@@ -197,7 +197,7 @@ select {
  
 @media  (min-width: 800px){
 
-.regs {
+.regs{
     margin: 20px;
     /* margin-left:-50px; */
    
@@ -211,7 +211,7 @@ select {
     text-align: center;
     font-size: small;
 }
-.regT{
+.regT {
     margin: 20px;
     /* margin-left:-50px; */
    
