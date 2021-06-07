@@ -18,6 +18,11 @@ h1{
 .textArea label {
  font-weight: bolder;
 }
+.label1 {
+    font-weight: bolder;
+    margin-right: 20%;
+    font-size: x-large;
+   }
 
 .textArea .inputs {
     border: 1px solid #0c0f33;
